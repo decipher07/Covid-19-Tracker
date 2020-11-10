@@ -19,6 +19,7 @@ function App() {
             name: country.country, // United States, United Kingdom
             value: country.countryInfo.iso2 // UK, USA, FR
           }))
+          console.log(countries)
           setCountries(countries);
         });
     };
@@ -27,15 +28,21 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    
+    console.log(countryCode); 
+    setCountry(countryCode);
+    console.log(country)
   }
 
   return (
     <div className="app">
+
+      {/* Header */}
+      {/* Title + Select Input Dropdown field */}
+
       <div className="app__header">
         <h1>Covid 19 Tracker </h1>
         <FormControl className="app__dropdown">
-          <Select variant="outlined" value={country}>
+          <Select variant="outlined" onChange={onCountryChange} value={country}>
             <MenuItem value="worldwide">Worldwide</MenuItem>
             {countries.map(country => (
               <MenuItem value={country.value}>{country.name}</MenuItem>
@@ -45,13 +52,12 @@ function App() {
         </FormControl>
       </div>
 
-      {/* Header */}
-      {/* Title + Select Input Dropdown field */}
+      <div className="app_stats">
+        {/* InfoBox title="Coronavirus Cases"*/}
+        {/* InfoBox */} 
+        {/* InfoBox */}
+      </div>
 
-      {/* InfoBox */}
-      {/* InfoBox */}
-      {/* InfoBox */}
-      
       {/* Table */}
       {/* Graph */}
 
