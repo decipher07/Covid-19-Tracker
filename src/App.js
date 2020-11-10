@@ -8,6 +8,7 @@ import {MenuItem, FormControl, Select, Card, CardContent, } from "@material-ui/c
 function App() {
 
   const [countries, setCountries] = useState([])
+  const [country, setCountry] = useState('worldwide')
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -18,24 +19,24 @@ function App() {
             name: country.country, // United States, United Kingdom
             value: country.countryInfo.iso2 // UK, USA, FR
           }))
-
           setCountries(countries);
         });
     };
     getCountriesData();
   }, [])
 
-
-
-
-
+  const onCountryChange = async (event) => {
+    const countryCode = event.target.value;
+    
+  }
 
   return (
     <div className="app">
       <div className="app__header">
         <h1>Covid 19 Tracker </h1>
         <FormControl className="app__dropdown">
-          <Select variant="outlined" value="abc">
+          <Select variant="outlined" value={country}>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
             {countries.map(country => (
               <MenuItem value={country.value}>{country.name}</MenuItem>
             ))
