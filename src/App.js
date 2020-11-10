@@ -4,15 +4,16 @@ import {MenuItem, FormControl, Select, Card, CardContent, } from "@material-ui/c
 function App() {
   return (
     <div className="app">
-      <h1>Covid 19 Tracker </h1>
-      
-      <FormControl className="app__dropdown">
-        <Select variant="outlined" value="abc">
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Option 2</MenuItem>
-          <MenuItem value="worldwide">Option 3</MenuItem>
-        </Select>
-      </FormControl>
+      <div className="app___header">
+        <h1>Covid 19 Tracker </h1>
+        <FormControl className="app__dropdown">
+          <Select variant="outlined" value="abc">
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+            <MenuItem value="worldwide">Option 2</MenuItem>
+            <MenuItem value="worldwide">Option 3</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
 
       {/* Header */}
       {/* Title + Select Input Dropdown field */}
