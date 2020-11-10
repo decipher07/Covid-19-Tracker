@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from 'react'
 import './App.css';
+import InfoBox from './InfoBox';
 import {MenuItem, FormControl, Select, Card, CardContent, } from "@material-ui/core"
 
 function App() {
@@ -52,10 +53,10 @@ function App() {
         </FormControl>
       </div>
 
-      <div className="app_stats">
-        {/* InfoBox title="Coronavirus Cases"*/}
-        {/* InfoBox title="Coronavirus Recovery" */} 
-        {/* InfoBox title="Death"*/}
+      <div className="app__stats">
+            <InfoBox title="Coronavirus Cases" cases={123} total={2000} />
+            <InfoBox title="Recovered" cases={123} total={2000} />
+            <InfoBox title="Death" cases={123} total={2000} />
       </div>
 
       {/* Table */}
