@@ -10,7 +10,13 @@ function LineGraph() {
         .then((data) => {
             console.log(data)
         })
-    })
+    }, [])
+
+    const buildChartData = data => {
+        const chartData = [];
+        let lastDataPoint;
+        
+    }
 
     return (
         <div>
