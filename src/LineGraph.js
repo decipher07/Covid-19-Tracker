@@ -1,5 +1,7 @@
 import React, { useState , useEffect} from 'react'
 import {Line} from 'react-chartjs-2'
+import numeral from "numeral";
+
 
 const options = {
     legend: {
@@ -16,7 +18,7 @@ const options = {
       intersect: false,
       callbacks: {
         label: function (tooltipItem, data) {
-          return numeral(tooltipItem.value).format("+0,0");
+        return numeral(tooltipItem.value).format("+0,0");
         },
       },
     },
