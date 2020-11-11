@@ -12,6 +12,15 @@ function App() {
   const [countries, setCountries] = useState([])
   const [country, setCountry] = useState('worldwide')
   const [countryInfo, setCountryInfo] = useState({})
+  const [tableData, setTableData] = useState([])
+
+  useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/all')
+    .then((response) => response.json())
+    .then((data) => {
+      setCountryInfo(data)
+    })
+  }, [])
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -24,6 +33,7 @@ function App() {
             value: country.countryInfo.iso2 // UK, USA, FR
           }))
           console.log(countries)
+          setTableData(data)
           setCountries(countries);
         });
     };
@@ -78,6 +88,7 @@ function App() {
       <Card className="app__right">
         <CardContent>
           <h3>Live cases by Country</h3>
+          <Table countries={tableData}/>
           {/* Table */}
           <h3>Worldwide new Cases</h3>
           {/* Graph */}
