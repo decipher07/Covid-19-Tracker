@@ -95,6 +95,7 @@ function App() {
           <Table countries={tableData}/>
           {/* Table */}
           <h3>Worldwide new Cases</h3>
+          <LineGraph />
           {/* Graph */}
         </CardContent>
       </Card>
