@@ -9,6 +9,7 @@ import Table from './Table'
 import LineGraph from './LineGraph'
 import {sortData} from './util'
 import {MenuItem, FormControl, Select, Card, CardContent, } from "@material-ui/core"
+import "leaflet/dist/leaflet.css";
 
 function App() {
 
