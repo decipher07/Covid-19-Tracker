@@ -8,13 +8,13 @@ function LineGraph() {
         fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
         .then((response) => response.json())
         .then((data) => {
-
+            console.log(data)
         })
     })
 
     return (
         <div>
-            <h1>I am a import { compose, graphql } from 'react-apollo' </h1>
+            <h1>I am a import from 'react-apollo' </h1>
             {/* <Line data options/> */}
         </div>
     )
