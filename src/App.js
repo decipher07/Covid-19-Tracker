@@ -6,6 +6,7 @@ import './App.css';
 import InfoBox from './InfoBox';
 import Map from './Map'
 import Table from './Table'
+import {sortData} from './util'
 import {MenuItem, FormControl, Select, Card, CardContent, } from "@material-ui/core"
 
 function App() {
@@ -33,8 +34,10 @@ function App() {
             name: country.country, // United States, United Kingdom
             value: country.countryInfo.iso2 // UK, USA, FR
           }))
+
+          const sortedData = sortData(data);
           console.log(countries)
-          setTableData(data)
+          setTableData(sortData)
           setCountries(countries);
         });
     };
