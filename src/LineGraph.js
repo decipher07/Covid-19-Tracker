@@ -12,10 +12,20 @@ function LineGraph() {
         })
     }, [])
 
-    const buildChartData = data => {
+    const buildChartData = (data, casesType='cases') => {
         const chartData = [];
         let lastDataPoint;
-        
+        data[casesType].forEach(date => {
+            if (lastDataPoint) {
+                const newDataPoint = {
+                    x: data,
+                    y: data[casesType][date] - lastDataPoint
+                }
+                chartData.push(newDataPoint);
+            }
+            lastDataPoint = data[casesType][date];
+        })
+        return chartData;
     }
 
     return (
