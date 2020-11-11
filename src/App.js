@@ -37,8 +37,9 @@ function App() {
           }))
 
           const sortedData = sortData(data);
-          console.log(countries)
-          setTableData(sortData)
+          // console.log(countries)
+          setTableData(sortedData)
+          // console.log(sortedData)
           setCountries(countries);
         });
     };
