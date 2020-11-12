@@ -89,7 +89,7 @@ function App() {
           </div>
 
           {/* Map */}
-          <Map />  
+          <Map center={mapCenter} zoom={mapZoom}/>  
       </div>
       
       <Card className="app__right">
