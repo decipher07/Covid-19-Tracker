@@ -31,8 +31,10 @@ export const sortData = (data) => {
 // Draw cirlces on the map
 export const showDataonMap = (data, casesType='cases') => (
     data.map((country) => (
-        <Circle center={[country.countryInfo.lat, country.countryInfo.long]} color={casesTypeColors[casesType].hex} fillColor={casesTypeColors[casesType].hex} fillOpacity={0.4} radius={ Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier }>
-          
+        <Circle center={[country.countryInfo.lat, country.countryInfo.long]} color={casesTypeColors[casesType].hex} fillColor={casesTypeColors[casesType].hex} fillOpacity={0.4} radius={ Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier/2 }>
+            <Popup>
+                <h1>I'm a Pop up</h1>
+            </Popup>
         </Circle>
     ))
 )
