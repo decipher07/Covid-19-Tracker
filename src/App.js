@@ -91,9 +91,9 @@ function App() {
           </div>
 
           <div className="app__stats">
-                <InfoBox title="Coronavirus Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
-                <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
-                <InfoBox title="Death" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+                <InfoBox title="Coronavirus Cases" cases={prettyPrintStat(countryInfo.todayCases)} total={prettyPrintStat(countryInfo.cases)} />
+                <InfoBox title="Recovered" cases={prettyPrintStat(countryInfo.todayRecovered)} total={prettyPrintStat(countryInfo.recovered)} />
+                <InfoBox title="Death" cases={prettyPrintStat(countryInfo.todayDeaths)} total={prettyPrintStat(countryInfo.deaths)} />
           </div>
 
           {/* Map */}
