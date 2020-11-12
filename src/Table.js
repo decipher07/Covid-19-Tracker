@@ -1,4 +1,5 @@
 import React from 'react'
+import numeral from 'numeral'
 import './Table.css'
 
 function Table({countries}) {
