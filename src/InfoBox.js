@@ -4,7 +4,7 @@ import './InfoBox.css'
 
 function InfoBox({title, cases, total}) {
     return (
-        <Card>
+        <Card className="infoBox">
             <CardContent>
                 {/* Title ie Coronavirus Cases */}
                 <Typography className="infoBox__title" color="textSecondary">{title}</Typography>
